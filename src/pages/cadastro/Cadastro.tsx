@@ -153,7 +153,7 @@ function Cadastro() {
           >
             {isLoading ? <ThreeDots
                           visible={true}
-                          height="40"
+                          height="30"
                           width="60"
                           color="#33212B"
                           radius="9"

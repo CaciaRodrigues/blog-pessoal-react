@@ -9,34 +9,32 @@ function Login() {
 
   const navigate = useNavigate();
 
-  const { usuario, handleLogin, isLoading } = useContext(AuthContext);
+  const { usuario, handleLogin, isLoading } = useContext(AuthContext)
 
-  const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
-        {} as UsuarioLogin
-    );
+  const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>({} as UsuarioLogin)
 
-    useEffect(() => {
-      if (usuario.token !== "") {
+  useEffect(() => {
+      if (usuario.token !== '') {
           navigate('/home')
       }
-  }, [usuario]);
+  }, [usuario])
 
   function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
-    setUsuarioLogin({
-        ...usuarioLogin,
-        [e.target.name]: e.target.value
-    })
-};
+      setUsuarioLogin({
+          ...usuarioLogin,
+          [e.target.name]: e.target.value,
+      })
+  }
 
-function login(e: ChangeEvent<HTMLFormElement>) {
-  e.preventDefault()
-  handleLogin(usuarioLogin)
-}
+  function login(e: ChangeEvent<HTMLFormElement>) {
+      e.preventDefault()
+      handleLogin(usuarioLogin)
+  }
 
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold bg-lavender-blush-white text-licorine-black">
-        <form className="flex justify-center items-center flex-col w-1/2 gap-4">
+        <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
           <h2 className="text-5xl ">Entrar</h2>
           <div className="flex flex-col w-full">
             <label htmlFor="usuario">Usuário</label>
@@ -64,12 +62,11 @@ function login(e: ChangeEvent<HTMLFormElement>) {
           </div>
           <button
             type="submit"
-            className="rounded bg-rose-quartz flex justify-center hover:bg-lit-eggplant-purple text-lavender-blush-white w-1/2 py-2"
-          >
+            className="rounded bg-rose-quartz flex justify-center hover:bg-lit-eggplant-purple text-lavender-blush-white w-1/2 py-2">
             {isLoading ? 
               <ThreeDots
               visible={true}
-              height="40"
+              height="30"
               width="60"
               color="#33212B"
               radius="9"
