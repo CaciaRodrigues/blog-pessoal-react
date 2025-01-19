@@ -1,19 +1,25 @@
 import { Link } from "react-router-dom";
+import chocolateCosmos from '../../assets/imgs/chocolatecosmos.png';
 
 function Navbar() {
   return (
     <>
       <div
-        className="w-full flex justify-center py-4
-            			   bg-indigo-900 text-white"
-      >
+        className="w-full flex justify-around py-4 bg-dark-purple-brown text-mimi-pink">
         <div className="container flex justify-between text-lg">
-          <Link to="/home" className="text-2xl font-bold">
-            Blog Pessoal
-          </Link>
-
           <div className="flex gap-4">
-            Postagens Temas Cadastrar tema Perfil Sair
+            <img src={chocolateCosmos} alt="2 Chocolate Cosmos Flowers" className="h-8 w-12"/>
+            <Link to="/home" className="text-2xl font-bold font-playwrite">
+              Cacia S R Sousa
+            </Link>
+          </div>
+
+          <div className=" group flex gap-4 font-montserrat">
+            <p className="hover:text-mountbatten-pink">Postagens</p>
+            <p className="hover:text-mountbatten-pink">Temas</p>
+            <p className="hover:text-mountbatten-pink">Cadastrar Tema</p>
+            <p className="hover:text-mountbatten-pink">Perfil</p>
+            <p className="hover:text-red-700">Sair</p>
           </div>
         </div>
       </div>
