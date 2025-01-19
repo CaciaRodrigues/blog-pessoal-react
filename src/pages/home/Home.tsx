@@ -2,8 +2,8 @@
 function Home() {
     return (
         <>
-            <div className="bg-indigo-900 flex justify-center">
-                <div className='container grid grid-cols-2 text-white'>
+            <div className="bg-lit-rose-quartz flex justify-center">
+                <div className='container grid grid-cols-2 text-lavender-blush-white'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h2 className='text-5xl font-bold'>
                             Seja Bem Vinde!
@@ -13,8 +13,8 @@ function Home() {
                         </p>
 
                         <div className="flex justify-around gap-4">
-                            <div className='rounded text-white 
-                                            border-white border-solid border-2 py-2 px-4'
+                            <div className='rounded bg-rose-quartz text-lavender-blush-white 
+                                            border-rose-quartz border-solid border-2 py-2 px-4 hover:bg-lit-eggplant-purple'
                                 >
                                 Nova Postagem
                             </div>
