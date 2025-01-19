@@ -7,11 +7,12 @@ function Navbar() {
 
   const navigate = useNavigate();
 
-  const {handleLogOut} = useContext(AuthContext)
+  const { handleLogout } = useContext(AuthContext)
 
   function logout() {
-    handleLogOut()
-    alert('O Usuário foi desconctado com sucesso!')
+
+    handleLogout()
+    alert('O Usuário foi desconectado com sucesso!')
     navigate('/')
   }
 
@@ -31,7 +32,7 @@ function Navbar() {
             <p className="hover:text-mountbatten-pink">Temas</p>
             <p className="hover:text-mountbatten-pink">Cadastrar Tema</p>
             <p className="hover:text-mountbatten-pink">Perfil</p>
-            <p className="hover:text-red-700">Sair</p>
+            <Link to='' onClick={logout} className="hover:text-red-700">Sair</Link>
           </div>
         </div>
       </div>
