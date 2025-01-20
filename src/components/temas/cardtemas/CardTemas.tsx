@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
+import Tema from '../../../models/Tema';
 
-function CardTemas() {
+interface CardTemasProps {
+    tema: Tema
+}
+
+function CardTemas({ tema }: CardTemasProps) {
     return (
         <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
             <header className='py-2 px-6 bg-dark-eggplant-purple text-lavender-blush-white font-bold text-2xl'>Tema</header>
-            <p className='p-8 text-3xl bg-mimi-pink h-full'>Descrição</p>
+            <p className='p-8 text-3xl bg-mimi-pink h-full'>{tema.descricao}</p>
 
             <div className='flex'>
                 <Link to='' className='w-full text-lavender-blush-white bg-mountbatten-pink hover:bg-lit-eggplant-purple flex items-center justify-center py-2'>
