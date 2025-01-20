@@ -2,7 +2,7 @@ import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Tema from "../../../models/Tema";
 import { AuthContext } from "../../../contexts/AuthContext";
-import { atualizar } from "../../../services/Service";
+import { atualizar , buscar, cadastrar } from "../../../services/Service";
 import { ThreeDots } from "react-loader-spinner";
 
 function FormTema() {
@@ -17,7 +17,7 @@ function FormTema() {
 
     const { id } = useParams<{ id: string }>();
 
-    async function buscatPorId(id: string) {
+    async function buscarPorId(id: string) {
         try {
             await buscar(`/temas/${id}`, setTema, {
                 headers: { Authorization: token }
@@ -38,7 +38,7 @@ function FormTema() {
 
     useEffect(() => {
         if (id !== undefined) {
-            buscatPorId(id)
+            buscarPorId(id)
         }
     }, [id])
 
@@ -50,10 +50,10 @@ function FormTema() {
     }
 
     function retornar() {
-        navigate('/temas')
+        navigate("/temas")
     }
 
-    async function  gerarNovoTema(e: ChangeEvent<HTMLFormElement>) {
+    async function gerarNovoTema(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         setIsLoading(true)
 
@@ -62,7 +62,7 @@ function FormTema() {
                 await atualizar(`/temas`, tema, setTema, {
                     headers: { 'Authorization': token }
                 })
-                alert("O Tema foi atualizado com sucesso!")
+                alert('O Tema foi atualizado com sucesso!')
             } catch (error: any) {
                 if (error.toString().includes('403')) {
                     handleLogout();
@@ -87,7 +87,6 @@ function FormTema() {
 
         setIsLoading(false)
         retornar()
-
     }
 
     return (
@@ -112,7 +111,7 @@ function FormTema() {
                     {isLoading? 
                         <ThreeDots
                             visible={true}
-                            height="30"
+                            height="25"
                             width="60"
                             color="#33212B"
                             radius="9"

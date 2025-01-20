@@ -22,7 +22,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/temas" element={<ListaTemas />} />
             <Route path="/cadastrartema" element={<FormTema />} />
-            <Route path="/editartemas/:id" element={<FormTema />} />
+            <Route path="/editartema/:id" element={<FormTema />} />
           </Routes>
         </div>
         <Footer />

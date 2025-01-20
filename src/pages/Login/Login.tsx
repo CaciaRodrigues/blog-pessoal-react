@@ -66,7 +66,7 @@ function Login() {
             {isLoading ? 
               <ThreeDots
               visible={true}
-              height="30"
+              height="25"
               width="60"
               color="#33212B"
               radius="9"
