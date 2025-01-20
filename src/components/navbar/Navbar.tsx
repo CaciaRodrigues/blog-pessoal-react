@@ -23,7 +23,7 @@ function Navbar() {
           <div className="flex gap-4">
             <img src={chocolateCosmos} alt="2 Chocolate Cosmos Flowers" className="h-8 w-12"/>
             <Link to="/home" className="text-2xl font-bold font-playwrite">
-              Cacia S R Sousa
+              Blog Pessoal
             </Link>
           </div>
 
