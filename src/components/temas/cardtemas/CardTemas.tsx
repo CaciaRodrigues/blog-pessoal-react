@@ -12,7 +12,7 @@ function CardTemas({ tema }: CardTemasProps) {
             <p className='p-8 text-3xl bg-mimi-pink h-full'>{tema.descricao}</p>
 
             <div className='flex'>
-                <Link to='' className='w-full text-lavender-blush-white bg-mountbatten-pink hover:bg-lit-eggplant-purple flex items-center justify-center py-2'>
+                <Link to={`/editartema/${tema.id}`} className='w-full text-lavender-blush-white bg-mountbatten-pink hover:bg-lit-eggplant-purple flex items-center justify-center py-2'>
                     <button>Editar</button>
                 </Link>
                 <Link to='' className='text-lavender-blush-white bg-red-900 hover:bg-red-800 w-full flex items-center justify-center'>
