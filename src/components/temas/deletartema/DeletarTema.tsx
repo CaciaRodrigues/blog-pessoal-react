@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Tema from "../../../models/Tema";
 import { AuthContext } from "../../../contexts/AuthContext";
-import { buscar } from "../../../services/Service";
+import { buscar,deletar } from "../../../services/Service";
 import { ThreeDots } from "react-loader-spinner";
 
 function DeletarTema() {
