@@ -28,7 +28,7 @@ function Navbar() {
           </div>
 
           <div className=" group flex gap-4 font-montserrat">
-            <p className="hover:text-mountbatten-pink">Postagens</p>
+            <Link to='/postagens' className="hover:text-mountbatten-pink">Postagens</Link>
             <Link to='/temas' className="hover:text-mountbatten-pink">Temas</Link>
             <Link to='/cadastrartema' className="hover:text-mountbatten-pink">Cadastrar Tema</Link>
             <p className="hover:text-mountbatten-pink">Perfil</p>
