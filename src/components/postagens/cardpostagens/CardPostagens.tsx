@@ -6,7 +6,7 @@ function CardPostagens() {
             <div>
                 <div className="flex w-full bg-lit-eggplant-purple py-2 px-4 items-center gap-4">
                     <img src="https://i.imgur.com/pK6vSCy.png" className="h-12 rounded-full" alt="" />
-                    <h3 className="text-lg font-bold text-center uppercase">Nome do Usuário</h3>
+                    <h3 className="text-lg  text-lavender-blush-white font-bold text-center uppercase">Nome do Usuário</h3>
                 </div>
                 <div className="p-4">
                     <h4 className="text-lg font-semibold uppercase">Título</h4>

@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import chocolateCosmos from '../../assets/imgs/chocolatecosmos.png';
 
 function Navbar() {
 
@@ -21,7 +20,7 @@ function Navbar() {
       <div className="w-full flex justify-around py-4 bg-dark-purple-brown text-mimi-pink" >
         <div className="container flex justify-between text-lg">
           <div className="flex gap-4">
-            <img src={chocolateCosmos} alt="2 Chocolate Cosmos Flowers" className="h-8 w-12"/>
+            <img src="https://ik.imagekit.io/caciasrs/chocolatecosmos.png?updatedAt=1737301650426" alt="2 Chocolate Cosmos Flowers" className="h-8 w-12"/>
             <Link to="/home" className="text-2xl font-bold font-playwrite">
               Blog Pessoal
             </Link>

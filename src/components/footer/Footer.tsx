@@ -1,5 +1,4 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
-import redHeart from '../../assets/imgs/red-heart-mid.svg'
 
 function Footer() {
 
@@ -11,7 +10,7 @@ function Footer() {
                 <div className="container flex flex-col items-center py-5 gap-3">
                     <p className='text-xl font-bold'> Projeto Blog Pessoal Generation | Copyright: {data}</p>
 
-                    <p className='flex gap-2'>Desenvolvido e estilizado com <img src={redHeart} alt="Stylized red anatomical heart" className='size-5 hover:animate-pulse'/> por Cacia S R Sousa</p>
+                    <p className='flex gap-2'>Desenvolvido e estilizado com <img src="https://ik.imagekit.io/caciasrs/red-heart-mid.svg?updatedAt=1737301648707" alt="Stylized red anatomical heart" className='size-5 hover:animate-pulse'/> por Cacia S R Sousa</p>
                     
                     <p className='text-lg'>Para contato:</p>
                     <div className='flex gap-4'> 
