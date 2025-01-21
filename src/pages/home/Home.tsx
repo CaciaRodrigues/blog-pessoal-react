@@ -14,8 +14,8 @@ function Home() {
                         </p>
 
                         <div className="flex justify-around gap-4">
-                            <div className='rounded bg-rose-quartz text-lavender-blush-white 
-                                            border-rose-quartz border-solid border-2 py-2 px-4 hover:bg-lit-eggplant-purple'
+                            <div className='rounded bg-mountbatten-pink text-lavender-blush-white 
+                                            border-mountbatten-pink border-solid border-2 py-2 px-4 hover:bg-lit-eggplant-purple'
                                 >
                                 Nova Postagem
                             </div>
@@ -24,9 +24,9 @@ function Home() {
 
                     <div className="flex justify-center ">
                         <img
-                            src="https://i.imgur.com/fyfri1v.png"
+                            src="https://ik.imagekit.io/caciasrs/SirFitzWilliamDarcyDaSilva.jpg?updatedAt=1737471557485"
                             alt="Imagem Página Home"
-                            className='w-2/3'
+                            className='w-2/3 rounded-full py-4 filter drop-shadow-2xl'
                         />
                     </div>
                 </div>
