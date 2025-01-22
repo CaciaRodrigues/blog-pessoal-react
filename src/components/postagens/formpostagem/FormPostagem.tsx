@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Tema from "../../../models/Tema";
@@ -13,10 +14,10 @@ function FormPostagem() {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [temas, setTemas] = useState<Tema[]>([]);
     
-    const [tema. setTema] = useState<Tema>({id: 0, descricao: '', });
+    const [tema, setTema] = useState<Tema>({id: 0, descricao: '', });
     const [postagem, setPostagem] = useState<Postagem>({} as Postagem);
 
-    const [ id ] = useParams<{id: string}>();
+    const { id } = useParams<{id: string}>();
 
     const { usuario, handleLogout } = useContext(AuthContext);
     const token = usuario.token;
