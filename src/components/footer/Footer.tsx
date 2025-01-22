@@ -1,12 +1,18 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
+import { ReactNode, useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
 
 function Footer() {
 
-    const data = new Date().getFullYear()
+    const data = new Date().getFullYear();
 
-    return (
-        <>
-            <div className="flex justify-center  bg-dark-purple-brown text-mimi-pink font-montserrat">
+    const { usuario } = useContext(AuthContext);
+
+    let component: ReactNode;
+
+    if (usuario.token !== "") {
+        component = 
+        <div className="flex justify-center  bg-dark-purple-brown text-mimi-pink font-montserrat">
                 <div className="container flex flex-col items-center py-5 gap-3">
                     <p className='text-xl font-bold'> Projeto Blog Pessoal Generation | Copyright: {data}</p>
 
@@ -27,6 +33,11 @@ function Footer() {
                     </div>
                 </div>
             </div>
+    }
+
+    return (
+        <>
+           {component} 
         </>
     )
 }
