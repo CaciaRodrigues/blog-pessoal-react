@@ -30,7 +30,7 @@ function Navbar() {
             <Link to='/postagens' className="hover:text-mountbatten-pink">Postagens</Link>
             <Link to='/temas' className="hover:text-mountbatten-pink">Temas</Link>
             <Link to='/cadastrartema' className="hover:text-mountbatten-pink">Cadastrar Tema</Link>
-            <p className="hover:text-mountbatten-pink">Perfil</p>
+            <Link to='/perfil' className="hover:text-mountbatten-pink">Perfil</Link>
             <Link to='' onClick={logout} className="hover:text-red-700">Sair</Link>
           </div>
         </div>
