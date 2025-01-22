@@ -1,38 +1,39 @@
-import { useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useContext, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
+import { AuthContext } from '../../contexts/AuthContext'
 
 function Perfil() {
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
-const {usuario} = useContext(AuthContext);
+    const { usuario } = useContext(AuthContext)
 
     useEffect(() => {
-        if (usuario.token === '') {
-            alert('Você precisa estar logado!');
-            navigate('/');
+        if (usuario.token === "") {
+            alert('Você precisa estar logado')
+            navigate("/")
         }
-    }, [usuario.token]);
+    }, [usuario.token])
 
     return (
-        <div className="container mx-auto m-4 rounded-2xl overflow-hidden">
+        <div className='container mx-auto m-4 rounded-2xl overflow-hidden'>
 
-            <img  
-                className="w-full h-72 object-cover border-b-8 border-lavender-blush-white" 
-                src="https://i.imgur.com/ZZFAmzo.jpg" 
-                alt="Capa do Perfil" />
-            
             <img 
-                className="rounded-full w-56 mx-auto mt-[-8rem] border-8 border-lavender-blush-white" 
-                src={usuario.foto} 
-                alt={`Foto de perfil de ${usuario.nome}`} />
-            <div className="relative mt-[-6rem] h-72 flex flex-col bg-lit-rose-quartz text-lavender-blush-white text-2xl items-center justify-center">
-                <p>Nome: {usuario.nome}</p>
+                className='w-full h-80 object-cover border-b-4 border-lavender-blush-white filter saturate-25' 
+                src="https://ik.imagekit.io/caciasrs/capa-perfil.jpg?updatedAt=1737570200586" alt="Capa do Perfil" />
+
+            <img 
+                className='rounded-full w-72 mx-auto mt-[-11.5rem] border-4 border-lavender-blush-white relative z-10' 
+                src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} />
+
+            <div className="relative mt-[-6rem] h-80 flex flex-col bg-rose-quartz text-lavender-blush-white text-2xl items-center justify-center gap-2">
+                <p>Nome: {usuario.nome} </p>
                 <p>Email: {usuario.usuario}</p>
             </div>
+
         </div>
     )
 }
 
-export default Perfil;
+export default Perfil
