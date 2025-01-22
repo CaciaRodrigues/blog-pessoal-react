@@ -1,4 +1,5 @@
 import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens"
+import ModalPostagem from "../../components/postagens/modalpostagem/ModalPostagem";
 
 function Home() {
     return (
@@ -14,10 +15,8 @@ function Home() {
                         </p>
 
                         <div className="flex justify-around gap-4">
-                            <div className='rounded bg-mountbatten-pink text-lavender-blush-white 
-                                            border-mountbatten-pink border-solid border-2 py-2 px-4 hover:bg-lit-eggplant-purple'
-                                >
-                                Nova Postagem
+                            <div className='flex justify-around gap-4'>
+                                <ModalPostagem />
                             </div>
                         </div>
                     </div>
